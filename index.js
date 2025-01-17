@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ limit: "1000mb", extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://jimportfolio223.netlify.app',
     methods:["POST","GET","PUT","DELETE"],
     credentials:true
 }))
