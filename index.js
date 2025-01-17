@@ -20,7 +20,12 @@ app.use(cors({
     methods:["POST","GET","PUT","DELETE"],
     credentials:true
 }))
-
+app.get('/', (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: 'Welcome to Merchant App Server',
+  });
+});
 app.use('/api/project',projectRoute)
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
